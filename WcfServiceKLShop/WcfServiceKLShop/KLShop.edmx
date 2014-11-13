@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="KLShopModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="KLShopModelStoreContainer">
+          <EntitySet Name="CTDonHang" EntityType="KLShopModel.Store.CTDonHang" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CTPhieuNhap" EntityType="KLShopModel.Store.CTPhieuNhap" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DanhMucSP" EntityType="KLShopModel.Store.DanhMucSP" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DonHang" EntityType="KLShopModel.Store.DonHang" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PhanQuyen" EntityType="KLShopModel.Store.PhanQuyen" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PhieuNhap" EntityType="KLShopModel.Store.PhieuNhap" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SanPham" EntityType="KLShopModel.Store.SanPham" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="sysdiagrams" EntityType="KLShopModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="User" EntityType="KLShopModel.Store.User" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="WFCTPhieuNhap" EntityType="KLShopModel.Store.WFCTPhieuNhap" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="WFNhapHang" EntityType="KLShopModel.Store.WFNhapHang" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="WFPhieuNhap" EntityType="KLShopModel.Store.WFPhieuNhap" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="CTDonHang">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MaDonHang" Type="int" />
+          <Property Name="MaSP" Type="int" />
+          <Property Name="SoLuong" Type="int" />
+          <Property Name="Gia" Type="numeric" />
+          <Property Name="ThanhTien" Type="numeric" />
+        </EntityType>
+        <EntityType Name="CTPhieuNhap">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MaPN" Type="int" />
+          <Property Name="MaSP" Type="int" />
+          <Property Name="SoLuong" Type="int" />
+          <Property Name="Gia" Type="numeric" />
+          <Property Name="ThanhTien" Type="numeric" />
+        </EntityType>
+        <EntityType Name="DanhMucSP">
+          <Key>
+            <PropertyRef Name="MaDM" />
+          </Key>
+          <Property Name="MaDM" Type="nchar" Nullable="false" MaxLength="10" />
+          <Property Name="TenDM" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="DonHang">
+          <Key>
+            <PropertyRef Name="MaDonHang" />
+          </Key>
+          <Property Name="MaDonHang" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IDUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="Ngay" Type="smalldatetime" />
+          <Property Name="TriGiaDH" Type="numeric" />
+          <Property Name="MaTrangThai" Type="nvarchar" MaxLength="5" />
+        </EntityType>
+        <EntityType Name="PhanQuyen">
+          <Key>
+            <PropertyRef Name="MaQuyen" />
+          </Key>
+          <Property Name="MaQuyen" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="TenQuyen" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="PhieuNhap">
+          <Key>
+            <PropertyRef Name="MaPN" />
+          </Key>
+          <Property Name="MaPN" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="NgayNhap" Type="smalldatetime" />
+          <Property Name="IDUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="TriGiaDH" Type="numeric" />
+        </EntityType>
+        <EntityType Name="SanPham">
+          <Key>
+            <PropertyRef Name="MaSP" />
+          </Key>
+          <Property Name="MaSP" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TenSP" Type="nvarchar" MaxLength="50" />
+          <Property Name="MaDM" Type="nchar" MaxLength="10" />
+          <Property Name="Gia" Type="numeric" />
+          <Property Name="MoTa" Type="nvarchar" MaxLength="50" />
+          <Property Name="KichThuoc" Type="nvarchar" MaxLength="50" />
+          <Property Name="MauSac" Type="nvarchar" MaxLength="50" />
+          <Property Name="HinhAnh" Type="nvarchar" MaxLength="50" />
+          <Property Name="SoLuong" Type="nvarchar" MaxLength="50" />
+          <Property Name="TrangThai" Type="int" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="IDUser" />
+          </Key>
+          <Property Name="IDUser" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="PassUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="HoTenUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="DiaChi" Type="nvarchar" MaxLength="150" />
+          <Property Name="SoDienThoai" Type="nvarchar" MaxLength="50" />
+          <Property Name="Ngaysinh" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="Quyen" Type="int" />
+          <Property Name="ChucVu" Type="nvarchar" MaxLength="50" />
+          <Property Name="TrangThai" Type="int" />
+        </EntityType>
+        <EntityType Name="WFCTPhieuNhap">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MaPN" Type="int" />
+          <Property Name="MaSP" Type="int" />
+          <Property Name="SoLuong" Type="int" />
+        </EntityType>
+        <EntityType Name="WFNhapHang">
+          <Key>
+            <PropertyRef Name="MaPN" />
+          </Key>
+          <Property Name="MaPN" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="NgayNhap" Type="smalldatetime" />
+        </EntityType>
+        <EntityType Name="WFPhieuNhap">
+          <Key>
+            <PropertyRef Name="MaPN" />
+          </Key>
+          <Property Name="MaPN" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="NgayNhap" Type="smalldatetime" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="KLShopModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="KLShopEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="CTDonHangs" EntityType="KLShopModel.CTDonHang" />
+          <EntitySet Name="CTPhieuNhaps" EntityType="KLShopModel.CTPhieuNhap" />
+          <EntitySet Name="DanhMucSPs" EntityType="KLShopModel.DanhMucSP" />
+          <EntitySet Name="DonHangs" EntityType="KLShopModel.DonHang" />
+          <EntitySet Name="PhanQuyens" EntityType="KLShopModel.PhanQuyen" />
+          <EntitySet Name="PhieuNhaps" EntityType="KLShopModel.PhieuNhap" />
+          <EntitySet Name="SanPhams" EntityType="KLShopModel.SanPham" />
+          <EntitySet Name="sysdiagrams" EntityType="KLShopModel.sysdiagram" />
+          <EntitySet Name="Users" EntityType="KLShopModel.User" />
+          <EntitySet Name="WFCTPhieuNhaps" EntityType="KLShopModel.WFCTPhieuNhap" />
+          <EntitySet Name="WFNhapHangs" EntityType="KLShopModel.WFNhapHang" />
+          <EntitySet Name="WFPhieuNhaps" EntityType="KLShopModel.WFPhieuNhap" />
+        </EntityContainer>
+        <EntityType Name="CTDonHang">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="MaDonHang" Type="Int32" />
+          <Property Name="MaSP" Type="Int32" />
+          <Property Name="SoLuong" Type="Int32" />
+          <Property Name="Gia" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="ThanhTien" Type="Decimal" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="CTPhieuNhap">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="MaPN" Type="Int32" />
+          <Property Name="MaSP" Type="Int32" />
+          <Property Name="SoLuong" Type="Int32" />
+          <Property Name="Gia" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="ThanhTien" Type="Decimal" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="DanhMucSP">
+          <Key>
+            <PropertyRef Name="MaDM" />
+          </Key>
+          <Property Name="MaDM" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="TenDM" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="DonHang">
+          <Key>
+            <PropertyRef Name="MaDonHang" />
+          </Key>
+          <Property Name="MaDonHang" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="IDUser" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Ngay" Type="DateTime" Precision="0" />
+          <Property Name="TriGiaDH" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MaTrangThai" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="PhanQuyen">
+          <Key>
+            <PropertyRef Name="MaQuyen" />
+          </Key>
+          <Property Name="MaQuyen" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TenQuyen" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="PhieuNhap">
+          <Key>
+            <PropertyRef Name="MaPN" />
+          </Key>
+          <Property Name="MaPN" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="NgayNhap" Type="DateTime" Precision="0" />
+          <Property Name="IDUser" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TriGiaDH" Type="Decimal" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="SanPham">
+          <Key>
+            <PropertyRef Name="MaSP" />
+          </Key>
+          <Property Name="MaSP" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="TenSP" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MaDM" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="Gia" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MoTa" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="KichThuoc" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MauSac" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="HinhAnh" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SoLuong" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TrangThai" Type="Int32" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="IDUser" />
+          </Key>
+          <Property Name="IDUser" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PassUser" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="HoTenUser" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DiaChi" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="SoDienThoai" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Ngaysinh" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Email" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Quyen" Type="Int32" />
+          <Property Name="ChucVu" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TrangThai" Type="Int32" />
+        </EntityType>
+        <EntityType Name="WFCTPhieuNhap">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="MaPN" Type="Int32" />
+          <Property Name="MaSP" Type="Int32" />
+          <Property Name="SoLuong" Type="Int32" />
+        </EntityType>
+        <EntityType Name="WFNhapHang">
+          <Key>
+            <PropertyRef Name="MaPN" />
+          </Key>
+          <Property Name="MaPN" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="NgayNhap" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="WFPhieuNhap">
+          <Key>
+            <PropertyRef Name="MaPN" />
+          </Key>
+          <Property Name="MaPN" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="NgayNhap" Type="DateTime" Precision="0" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="KLShopModelStoreContainer" CdmEntityContainer="KLShopEntities">
+          <EntitySetMapping Name="CTDonHangs">
+            <EntityTypeMapping TypeName="KLShopModel.CTDonHang">
+              <MappingFragment StoreEntitySet="CTDonHang">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="MaDonHang" ColumnName="MaDonHang" />
+                <ScalarProperty Name="MaSP" ColumnName="MaSP" />
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+                <ScalarProperty Name="Gia" ColumnName="Gia" />
+                <ScalarProperty Name="ThanhTien" ColumnName="ThanhTien" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CTPhieuNhaps">
+            <EntityTypeMapping TypeName="KLShopModel.CTPhieuNhap">
+              <MappingFragment StoreEntitySet="CTPhieuNhap">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="MaPN" ColumnName="MaPN" />
+                <ScalarProperty Name="MaSP" ColumnName="MaSP" />
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+                <ScalarProperty Name="Gia" ColumnName="Gia" />
+                <ScalarProperty Name="ThanhTien" ColumnName="ThanhTien" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DanhMucSPs">
+            <EntityTypeMapping TypeName="KLShopModel.DanhMucSP">
+              <MappingFragment StoreEntitySet="DanhMucSP">
+                <ScalarProperty Name="MaDM" ColumnName="MaDM" />
+                <ScalarProperty Name="TenDM" ColumnName="TenDM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DonHangs">
+            <EntityTypeMapping TypeName="KLShopModel.DonHang">
+              <MappingFragment StoreEntitySet="DonHang">
+                <ScalarProperty Name="MaDonHang" ColumnName="MaDonHang" />
+                <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+                <ScalarProperty Name="Ngay" ColumnName="Ngay" />
+                <ScalarProperty Name="TriGiaDH" ColumnName="TriGiaDH" />
+                <ScalarProperty Name="MaTrangThai" ColumnName="MaTrangThai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PhanQuyens">
+            <EntityTypeMapping TypeName="KLShopModel.PhanQuyen">
+              <MappingFragment StoreEntitySet="PhanQuyen">
+                <ScalarProperty Name="MaQuyen" ColumnName="MaQuyen" />
+                <ScalarProperty Name="TenQuyen" ColumnName="TenQuyen" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PhieuNhaps">
+            <EntityTypeMapping TypeName="KLShopModel.PhieuNhap">
+              <MappingFragment StoreEntitySet="PhieuNhap">
+                <ScalarProperty Name="MaPN" ColumnName="MaPN" />
+                <ScalarProperty Name="NgayNhap" ColumnName="NgayNhap" />
+                <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+                <ScalarProperty Name="TriGiaDH" ColumnName="TriGiaDH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SanPhams">
+            <EntityTypeMapping TypeName="KLShopModel.SanPham">
+              <MappingFragment StoreEntitySet="SanPham">
+                <ScalarProperty Name="MaSP" ColumnName="MaSP" />
+                <ScalarProperty Name="TenSP" ColumnName="TenSP" />
+                <ScalarProperty Name="MaDM" ColumnName="MaDM" />
+                <ScalarProperty Name="Gia" ColumnName="Gia" />
+                <ScalarProperty Name="MoTa" ColumnName="MoTa" />
+                <ScalarProperty Name="KichThuoc" ColumnName="KichThuoc" />
+                <ScalarProperty Name="MauSac" ColumnName="MauSac" />
+                <ScalarProperty Name="HinhAnh" ColumnName="HinhAnh" />
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="KLShopModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="KLShopModel.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+                <ScalarProperty Name="PassUser" ColumnName="PassUser" />
+                <ScalarProperty Name="HoTenUser" ColumnName="HoTenUser" />
+                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+                <ScalarProperty Name="SoDienThoai" ColumnName="SoDienThoai" />
+                <ScalarProperty Name="Ngaysinh" ColumnName="Ngaysinh" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Quyen" ColumnName="Quyen" />
+                <ScalarProperty Name="ChucVu" ColumnName="ChucVu" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WFCTPhieuNhaps">
+            <EntityTypeMapping TypeName="KLShopModel.WFCTPhieuNhap">
+              <MappingFragment StoreEntitySet="WFCTPhieuNhap">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="MaPN" ColumnName="MaPN" />
+                <ScalarProperty Name="MaSP" ColumnName="MaSP" />
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WFNhapHangs">
+            <EntityTypeMapping TypeName="KLShopModel.WFNhapHang">
+              <MappingFragment StoreEntitySet="WFNhapHang">
+                <ScalarProperty Name="MaPN" ColumnName="MaPN" />
+                <ScalarProperty Name="NgayNhap" ColumnName="NgayNhap" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WFPhieuNhaps">
+            <EntityTypeMapping TypeName="KLShopModel.WFPhieuNhap">
+              <MappingFragment StoreEntitySet="WFPhieuNhap">
+                <ScalarProperty Name="MaPN" ColumnName="MaPN" />
+                <ScalarProperty Name="NgayNhap" ColumnName="NgayNhap" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

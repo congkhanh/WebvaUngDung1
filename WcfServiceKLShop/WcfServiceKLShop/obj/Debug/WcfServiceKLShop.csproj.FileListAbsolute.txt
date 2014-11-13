@@ -1,0 +1,6 @@
+E:\Tai Lieu Dai Hoc\Nam 5 - HK1 (Hoc Ky Cuoi)\Web va ung dung\WcfServiceKLShop\WcfServiceKLShop\bin\WcfServiceKLShop.dll
+E:\Tai Lieu Dai Hoc\Nam 5 - HK1 (Hoc Ky Cuoi)\Web va ung dung\WcfServiceKLShop\WcfServiceKLShop\bin\WcfServiceKLShop.pdb
+E:\Tai Lieu Dai Hoc\Nam 5 - HK1 (Hoc Ky Cuoi)\Web va ung dung\WcfServiceKLShop\WcfServiceKLShop\bin\EntityFramework.dll
+E:\Tai Lieu Dai Hoc\Nam 5 - HK1 (Hoc Ky Cuoi)\Web va ung dung\WcfServiceKLShop\WcfServiceKLShop\bin\EntityFramework.xml
+E:\Tai Lieu Dai Hoc\Nam 5 - HK1 (Hoc Ky Cuoi)\Web va ung dung\WcfServiceKLShop\WcfServiceKLShop\obj\Debug\WcfServiceKLShop.dll
+E:\Tai Lieu Dai Hoc\Nam 5 - HK1 (Hoc Ky Cuoi)\Web va ung dung\WcfServiceKLShop\WcfServiceKLShop\obj\Debug\WcfServiceKLShop.pdb

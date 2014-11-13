@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KLShopModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="KLShopEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="CTDonHangs" EntityType="KLShopModel.CTDonHang" />
+    <EntitySet Name="CTPhieuNhaps" EntityType="KLShopModel.CTPhieuNhap" />
+    <EntitySet Name="DanhMucSPs" EntityType="KLShopModel.DanhMucSP" />
+    <EntitySet Name="DonHangs" EntityType="KLShopModel.DonHang" />
+    <EntitySet Name="PhanQuyens" EntityType="KLShopModel.PhanQuyen" />
+    <EntitySet Name="PhieuNhaps" EntityType="KLShopModel.PhieuNhap" />
+    <EntitySet Name="SanPhams" EntityType="KLShopModel.SanPham" />
+    <EntitySet Name="sysdiagrams" EntityType="KLShopModel.sysdiagram" />
+    <EntitySet Name="Users" EntityType="KLShopModel.User" />
+    <EntitySet Name="WFCTPhieuNhaps" EntityType="KLShopModel.WFCTPhieuNhap" />
+    <EntitySet Name="WFNhapHangs" EntityType="KLShopModel.WFNhapHang" />
+    <EntitySet Name="WFPhieuNhaps" EntityType="KLShopModel.WFPhieuNhap" />
+  </EntityContainer>
+  <EntityType Name="CTDonHang">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="MaDonHang" Type="Int32" />
+    <Property Name="MaSP" Type="Int32" />
+    <Property Name="SoLuong" Type="Int32" />
+    <Property Name="Gia" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="ThanhTien" Type="Decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="CTPhieuNhap">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="MaPN" Type="Int32" />
+    <Property Name="MaSP" Type="Int32" />
+    <Property Name="SoLuong" Type="Int32" />
+    <Property Name="Gia" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="ThanhTien" Type="Decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="DanhMucSP">
+    <Key>
+      <PropertyRef Name="MaDM" />
+    </Key>
+    <Property Name="MaDM" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="TenDM" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="DonHang">
+    <Key>
+      <PropertyRef Name="MaDonHang" />
+    </Key>
+    <Property Name="MaDonHang" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="IDUser" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Ngay" Type="DateTime" Precision="0" />
+    <Property Name="TriGiaDH" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="MaTrangThai" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="PhanQuyen">
+    <Key>
+      <PropertyRef Name="MaQuyen" />
+    </Key>
+    <Property Name="MaQuyen" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="TenQuyen" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="PhieuNhap">
+    <Key>
+      <PropertyRef Name="MaPN" />
+    </Key>
+    <Property Name="MaPN" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="NgayNhap" Type="DateTime" Precision="0" />
+    <Property Name="IDUser" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="TriGiaDH" Type="Decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="SanPham">
+    <Key>
+      <PropertyRef Name="MaSP" />
+    </Key>
+    <Property Name="MaSP" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="TenSP" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="MaDM" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="Gia" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="MoTa" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="KichThuoc" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="MauSac" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="HinhAnh" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SoLuong" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="TrangThai" Type="Int32" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="IDUser" />
+    </Key>
+    <Property Name="IDUser" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PassUser" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="HoTenUser" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DiaChi" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="SoDienThoai" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Ngaysinh" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Quyen" Type="Int32" />
+    <Property Name="ChucVu" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="TrangThai" Type="Int32" />
+  </EntityType>
+  <EntityType Name="WFCTPhieuNhap">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="MaPN" Type="Int32" />
+    <Property Name="MaSP" Type="Int32" />
+    <Property Name="SoLuong" Type="Int32" />
+  </EntityType>
+  <EntityType Name="WFNhapHang">
+    <Key>
+      <PropertyRef Name="MaPN" />
+    </Key>
+    <Property Name="MaPN" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="NgayNhap" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="WFPhieuNhap">
+    <Key>
+      <PropertyRef Name="MaPN" />
+    </Key>
+    <Property Name="MaPN" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="NgayNhap" Type="DateTime" Precision="0" />
+  </EntityType>
+</Schema>

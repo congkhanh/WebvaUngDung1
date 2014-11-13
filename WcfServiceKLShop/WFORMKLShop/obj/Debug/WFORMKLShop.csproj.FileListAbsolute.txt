@@ -1,0 +1,17 @@
+E:\Tai Lieu Dai Hoc\Nam 5 - HK1 (Hoc Ky Cuoi)\Web va ung dung\WcfServiceKLShop\WFORMKLShop\bin\Debug\WFORMKLShop.exe.config
+E:\Tai Lieu Dai Hoc\Nam 5 - HK1 (Hoc Ky Cuoi)\Web va ung dung\WcfServiceKLShop\WFORMKLShop\bin\Debug\WFORMKLShop.exe
+E:\Tai Lieu Dai Hoc\Nam 5 - HK1 (Hoc Ky Cuoi)\Web va ung dung\WcfServiceKLShop\WFORMKLShop\bin\Debug\WFORMKLShop.pdb
+E:\Tai Lieu Dai Hoc\Nam 5 - HK1 (Hoc Ky Cuoi)\Web va ung dung\WcfServiceKLShop\WFORMKLShop\obj\Debug\WFORMKLShop.Properties.Resources.resources
+E:\Tai Lieu Dai Hoc\Nam 5 - HK1 (Hoc Ky Cuoi)\Web va ung dung\WcfServiceKLShop\WFORMKLShop\obj\Debug\WFORMKLShop.csproj.GenerateResource.Cache
+E:\Tai Lieu Dai Hoc\Nam 5 - HK1 (Hoc Ky Cuoi)\Web va ung dung\WcfServiceKLShop\WFORMKLShop\obj\Debug\WFORMKLShop.exe
+E:\Tai Lieu Dai Hoc\Nam 5 - HK1 (Hoc Ky Cuoi)\Web va ung dung\WcfServiceKLShop\WFORMKLShop\obj\Debug\WFORMKLShop.pdb
+E:\Tai Lieu Dai Hoc\Nam 5 - HK1 (Hoc Ky Cuoi)\Web va ung dung\WcfServiceKLShop\WFORMKLShop\obj\Debug\WFORMKLShop.Form1.resources
+E:\Tai Lieu Dai Hoc\Nam 5 - HK1 (Hoc Ky Cuoi)\Web va ung dung\WcfServiceKLShop\WFORMKLShop\obj\Debug\WFORMKLShop.FormThongTin.resources
+E:\Tai Lieu Dai Hoc\Nam 5 - HK1 (Hoc Ky Cuoi)\Web va ung dung\WcfServiceKLShop\WFORMKLShop\obj\Debug\WFORMKLShop.FormSanPham.resources
+E:\Tai Lieu Dai Hoc\Nam 5 - HK1 (Hoc Ky Cuoi)\Web va ung dung\WcfServiceKLShop\WFORMKLShop\obj\Debug\WFORMKLShop.FormQLNguoiDung.resources
+E:\Tai Lieu Dai Hoc\Nam 5 - HK1 (Hoc Ky Cuoi)\Web va ung dung\WcfServiceKLShop\WFORMKLShop\obj\Debug\WFORMKLShop.FormQLDonHang.resources
+E:\Tai Lieu Dai Hoc\Nam 5 - HK1 (Hoc Ky Cuoi)\Web va ung dung\WcfServiceKLShop\WFORMKLShop\obj\Debug\WFORMKLShop.FormCTDonHang.resources
+E:\Tai Lieu Dai Hoc\Nam 5 - HK1 (Hoc Ky Cuoi)\Web va ung dung\WcfServiceKLShop\WFORMKLShop\obj\Debug\WFORMKLShop.FormQLNhapHang.resources
+E:\Tai Lieu Dai Hoc\Nam 5 - HK1 (Hoc Ky Cuoi)\Web va ung dung\WcfServiceKLShop\WFORMKLShop\obj\Debug\WFORMKLShop.FormCTNhapHang.resources
+E:\Tai Lieu Dai Hoc\Nam 5 - HK1 (Hoc Ky Cuoi)\Web va ung dung\WcfServiceKLShop\WFORMKLShop\obj\Debug\WFORMKLShop.FormXemTonKho.resources
+E:\Tai Lieu Dai Hoc\Nam 5 - HK1 (Hoc Ky Cuoi)\Web va ung dung\WcfServiceKLShop\WFORMKLShop\obj\Debug\WFORMKLShop.FormDanhMucSP.resources

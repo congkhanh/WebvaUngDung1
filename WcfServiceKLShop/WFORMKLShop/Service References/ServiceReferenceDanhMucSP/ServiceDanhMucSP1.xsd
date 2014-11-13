@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:1932/ServiceDanhMucSP.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfServiceKLShop" />
+  <xs:element name="All">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WcfServiceKLShop" minOccurs="0" name="AllResult" nillable="true" type="q1:ArrayOfDanhMucSP" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SuaDanhMuc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="madm" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tendm" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SuaDanhMucResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SuaDanhMucResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="XoaDanhMuc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="madm" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="XoaDanhMucResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="XoaDanhMucResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ThemDanhMuc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="madm" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tendm" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ThemDanhMucResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ThemDanhMucResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,38 @@
+﻿
+I. Giới thiệu:
+Website KLShop là  một Website chuyên bán các loại dụng cụ thể thao của các môn thể thao như bóng đá, bóng chuyền,bóng rổ, thể hình… 
+II. Kiến trúc
+Project được xây dựng  trên ASP.NET MVC – WCF –WINFORM
+III. Thiết Kế
+ASP.NET MVC để hiển thị web.
+WCF : cung cấp dịch vụ.
+WINFORM: Quản lý Web 
+IV.Các Chức Năng
+web
+1.Hiện thị tất cả sản phẩm.
+2.Hiện thị sản phẩm theo loại.
+3. Hiện thị chi tiết sản phẩm.
+4. Tìm kiếm sản phẩm.
+5. Đăng nhập tài khoản.
+6. Chỉnh sửa tài khoản hiện tại đăng nhập.
+7. Đăng ký mới 1 tài khoản.
+8. Thêm sản phẩm vào giỏ hàng.
+9. Cập nhật số lượng sản phẩm.
+10. Xóa  1 sản phẩm ra khỏi danh sách mua.
+11. Thanh Toán giỏ hàng.
+12. Gửi mail xác nhận giỏ hàng.
+Winform:
+13. Thêm sản phẩm mới.
+14. Sửa 1 sản phẩm.
+15.Thêm 1 người dùng mới.
+16. Sửa 1 người dùng.
+17. Sửa trạng thái của hóa đơn hàng.
+18. Cập nhập số lượng hàng .
+19. Xem số lượng sản phẩm.
+20. Xem hóa đơn đặt hàng theo ngày.
+21. Thêm 1 danh mục hàng.
+22. Xóa 1 danh mục hàng.
+23. Sửa 1 danh mục hàng
+V.Cách Cài đặt
+
+
